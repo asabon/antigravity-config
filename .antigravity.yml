@@ -8,4 +8,4 @@ rules:
   - "Keep code changes minimal and clearly state the reason for the changes."
   - "Do not make assumptions about unclear points, ask questions instead."
   - "For better readability, use half-width parentheses instead of full-width parentheses."
-  - "The .work directory is git-ignored. If writing to this directory is required, create or edit files via run_command instead of standard tools. Note that this method is permitted ONLY for the .work directory."
+  - "The .agent/work directory is git-ignored. If writing to this directory is required, create or edit files via run_command instead of standard tools. Note that this method is permitted ONLY for the .agent/work directory."

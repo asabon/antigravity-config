@@ -15,7 +15,7 @@
 1. **サブモジュールとして追加**:
    プロジェクトのルートディレクトリで以下のコマンドを実行し、このリポジトリをサブモジュールとして追加してください。
    ```bash
-   git submodule add <REPOSITORY_URL> .shared-config
+   git submodule add https://github.com/asabon/antigravity-config.git .shared-config
    ```
 
 2. **セットアップスクリプトの実行**:
@@ -35,12 +35,20 @@
 3. **`.gitignore` の設定**:
    プロジェクトの `.gitignore` に以下を追加してください。
    ```gitignore
-   .work/
+   .agent/work/
    .agent/config.yml
    ```
 
 4. **設定のカスタマイズ**:
-   `.agent/config.yml` を編集して、言語設定等を変更してください。
+   手順2で自動生成された `.agent/config.yml` を編集して、言語設定等を変更してください。
+
+## 使い方
+
+この設定には標準的なエージェントワークフローが含まれています。チャットインターフェースで以下のスラッシュコマンドを使用することで実行できます。
+
+- **/init**: セッションを初期化します（ルールの読み込み、環境チェックなど）。
+- **/save**: 現在の進捗状況をチェックポイントファイルに保存します。
+- **/resume**: 最後に保存された進捗レポートから作業を再開します。
 
 ## ディレクトリ構成
 
