@@ -1,0 +1,8 @@
+# User configuration
+.agent/config.yml
+
+# Checkpoint files
+.agent/.Checkpoints/
+
+# Work directory
+.agent/work
