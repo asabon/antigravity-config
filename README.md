@@ -15,7 +15,7 @@ This repository provides:
 1. **Add as Submodule**:
    Run the following command in your project root to add this repository as a submodule.
    ```bash
-   git submodule add <REPOSITORY_URL> .shared-config
+   git submodule add https://github.com/asabon/antigravity-config.git .shared-config
    ```
 
 2. **Run Setup Script**:
@@ -35,12 +35,20 @@ This repository provides:
 3. **Configure `.gitignore`**:
    Add the following to your project's `.gitignore`:
    ```gitignore
-   .work/
+   .agent/work/
    .agent/config.yml
    ```
 
 4. **Customize**:
-   Edit `.agent/config.yml` to set your preferred language.
+   Edit `.agent/config.yml` (created in step 2) to set your preferred language.
+
+## Usage
+
+This configuration includes standard agent workflows. You can trigger them by using the following slash commands in your chat interface:
+
+- **/init**: Initialize the session (reads project rules, checks environment).
+- **/save**: Save your current progress to a checkpoint file.
+- **/resume**: Resume work from the last saved progress report.
 
 ## Structure
 
