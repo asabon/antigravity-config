@@ -31,14 +31,14 @@ else
     echo "config.yml already exists. Skipping copy."
 fi
 
-# 3. Link .antigravity.yml
-SOURCE_RULES="$CONFIG_REPO_DIR/.antigravity.yml"
-TARGET_RULES=".antigravity.yml"
+# 3. Link AGENT.md
+SOURCE_RULES="$CONFIG_REPO_DIR/.agent/AGENT.md"
+TARGET_RULES=".agent/AGENT.md"
 
 if [ -e "$TARGET_RULES" ]; then
-    echo ".antigravity.yml already exists. Please remove it if you want to link to the shared config."
+    echo ".agent/AGENT.md already exists. Please remove it if you want to link to the shared config."
 else
-    echo "Linking .antigravity.yml..."
+    echo "Linking AGENT.md..."
     # Use relative path for symlink to handle different mount points or path styles better if needed,
     # but absolute is safer for standard use. Using absolute for clarity.
     ln -s "$SOURCE_RULES" "$TARGET_RULES"

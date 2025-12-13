@@ -11,7 +11,7 @@ description: Initialize session by reading project rules
    - If it exists, check for updates (e.g., compare local commit with remote HEAD).
    - If updates are available, report to the user and ask if they want to update the submodule (`git submodule update --remote .shared-config`).
    - If the update is performed, remind users who are manualy managing config (Option B) to run `/check-updates` to review and merge changes.
-5. Read .antigravity.yml.
+5. Read .agent/AGENT.md.
 6. Summarize the key rules and preferences to the user.
    - If a language is configured in `config.yml`, provide the summary in that language AND explicitly state that you will conduct the rest of this session in that language.
    - If no configuration is found, use the default language.

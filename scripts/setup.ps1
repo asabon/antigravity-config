@@ -38,15 +38,15 @@ else {
     Write-Host "config.yml already exists. Skipping copy."
 }
 
-# 3. Link .antigravity.yml
-$SourceRules = Join-Path $ConfigRepoDir ".antigravity.yml"
-$TargetRules = Join-Path $ProjectRootDir ".antigravity.yml"
+# 3. Link AGENT.md
+$SourceRules = Join-Path $ConfigRepoDir ".agent/AGENT.md"
+$TargetRules = Join-Path $AgentDir "AGENT.md"
 
 if (Test-Path $TargetRules) {
-    Write-Host ".antigravity.yml already exists. Please remove it if you want to link to the shared config." -ForegroundColor Yellow
+    Write-Host ".agent/AGENT.md already exists. Please remove it if you want to link to the shared config." -ForegroundColor Yellow
 }
 else {
-    Write-Host "Linking .antigravity.yml..."
+    Write-Host "Linking AGENT.md..."
     # Try HardLink first as it doesn't require admin privileges for files
     try {
         New-Item -ItemType HardLink -Path $TargetRules -Target $SourceRules | Out-Null
