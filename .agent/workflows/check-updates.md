@@ -6,7 +6,7 @@ description: Check for updates from the shared configuration submodule
 2. Update the shared configuration:
    - Run `git submodule update --remote .shared-config` (or `git pull` inside the directory) to fetch the latest changes.
 3. Compare the configurations:
-   - Compare `.antigravity.yml` with `.shared-config/.antigravity.yml`.
+   - Compare `.agent/AGENT.md` with `.shared-config/.agent/AGENT.md`.
    - Compare files in `.agent/workflows/` with `.shared-config/.agent/workflows/`.
 4. Report the results:
    - List any files that have changed in the shared configuration.

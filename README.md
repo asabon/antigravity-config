@@ -6,7 +6,7 @@ Shared configuration repository for **Antigravity** agentic coding assistant. Th
 
 This repository provides:
 
-- **Global Rules**: Standardized coding guidelines and agent behaviors stored in `.antigravity.yml`.
+- **Global Rules**: Standardized coding guidelines and agent behaviors stored in `.agent/AGENT.md`.
 - **Workflows**: Reusable agent workflows (e.g., init, resume, save) in `.agent/workflows`.
 - **User Configuration**: Template for personalizing agent interaction settings.
 
@@ -86,7 +86,7 @@ This configuration includes standard agent workflows. You can trigger them by us
 ├── .agent/
 │   ├── config.yml.sample   # Template for user-specific settings
 │   └── workflows/          # Shared agent workflows
-├── .antigravity.yml        # Core configuration and rules
+├── .agent/AGENT.md       # Core configuration and rules
 ├── README.md               # This file (English)
 └── README.ja.md            # Documentation in Japanese
 ```
