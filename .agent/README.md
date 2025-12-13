@@ -5,6 +5,30 @@ This directory is dedicated to **Antigravity** (the AI Agent) and contains confi
 ## Structure
 
 - **workflows/**: Contains markdown files defining specific workflows (e.g., `/init`, `/resume`). The AI agent reads these files to execute predefined sequences of tasks.
+
+## Available Workflows
+
+Defined in `.agent/workflows/`, these tasks can be executed via slash commands in the chat.
+
+- **`/init`** (init.md)
+  **Session Initialization**
+  Reads the project definition (`.agent/AGENT.md`) and configures the session based on user settings. Run this at the start of your work.
+
+- **`/check-updates`** (check-updates.md)
+  **Check for Updates**
+  Checks the shared configuration repository (`.shared-config`) for new rules or workflows and compares them with your local setup.
+
+- **`/save`** (save.md)
+  **Save Progress**
+  Saves current progress and pending tasks to `.agent/work/progress_<timestamp>.md`, making it easy to pause or share work.
+
+- **`/resume`** (resume.md)
+  **Resume Work**
+  Analyzes the last saved progress file to restore context and resume work from where you left off.
+
+- **`/propose-update`** (propose-update.md)
+  **Propose Changes**
+  Proposes changes to the shared configuration. It creates a new branch, pushes edits, guides you to create a PR, and then resets your local environment to a clean state.
 - **config.yml**: User-specific configuration file (e.g., language settings). This file is **ignored by git** (`.gitignore`) to allow each developer to have their own preferences.
 - **config.yml.sample**: A sample configuration file. Copy this to `config.yml` to set up your personal preferences.
 
